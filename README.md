@@ -2,6 +2,7 @@
 
 This project contains the following
 - a sample webapp (built using Express v4.18) with the following endpoints available:
+    - http://localhost:3000/
     - http://localhost:3000/json
     - http://localhost:3000/text
 - a sample test in a /test sub directory
@@ -12,3 +13,7 @@ This project contains the following
 - In the workspace, first install the dependencies using `npm install`
 - After this, webapp can be started using `npm start`
 - The test can be run using `npm test`
+
+# What next
+
+Go ahead, make sure changes and play around with it!

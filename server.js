@@ -4,10 +4,18 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app)
 
-// Start a simple server with two endpoints
-app.get('/json', (req, res) => res.status(200).json({status:"ok"}));
+app.set('json spaces', 2)
+app.get('/', (req, res) => {
+  res.send(`Welcome to GitLab workspace demo NodeJS Express app! <br/><br/>
+  You can browse <br/>
+  - <a href="https://${req.headers.host}/text">https://${req.headers.host}/text</a> for Text response <br/>
+  - <a href="https://${req.headers.host}/json">https://${req.headers.host}/json</a> for JSON response <br/>
+  `);
+});
+app.get('/json', (req, res) => res.status(200).json(req.headers));
 app.get('/text', (req, res) => {
-  res.send('Hello from Node.js Starter Application!');
+  headers = req.headers;
+  res.send(Object.keys(headers).map(k => {return k + " : " + headers[k]}).join(" <br/> "));
 });
 
 app.get('*', (req, res) => {
