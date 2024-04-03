@@ -12,7 +12,12 @@ This project contains the following
 
 - In the workspace, first install the dependencies using `npm install`
 - After this, webapp can be started using `npm start`
+- Preview the webapp in a new tab:
+  - Copy workspace url and replace existing port with `3000` 
+  - Example: `https://60001-workspace-73241-.../example-nodejs-express-app` becomes `https://3000-workspace-73241-.../example-nodejs-express-app`. 
 - The test can be run using `npm test`
+
+A [walkthrough video](https://youtu.be/lDVaOtO_JVM?feature=shared&t=178) is also available.
 
 # What next
 
