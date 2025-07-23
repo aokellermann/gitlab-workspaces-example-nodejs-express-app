@@ -1,0 +1,3 @@
+remote_development:
+  enabled: true
+  dns_zone: workspaces.gitlab.target
