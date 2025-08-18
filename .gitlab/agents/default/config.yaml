@@ -3,3 +3,6 @@ remote_development:
   dns_zone: workspaces.gitlab.target
   gitlab_workspaces_proxy:
     namespace: default
+  network_policy:
+    egress:
+      - allow: "0.0.0.0/0"
